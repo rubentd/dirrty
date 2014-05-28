@@ -1,5 +1,5 @@
 /* 
- * Dirrty v0.1.4
+ * Dirrty v0.1.5
  * jquery plugin to detect when the fields of a form are modified 
  * (c)2014 Rubén Torres - rubentdlh@gmail.com
  * Released under the MIT license
