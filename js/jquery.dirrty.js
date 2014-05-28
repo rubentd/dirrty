@@ -1,7 +1,6 @@
 /* 
  * Dirrty v0.1.1
- * jquery plugin to detect if the fields of a form had been modified
- * It allows to fire events 
+ * jquery plugin to detect when the fields of a form are modified 
  * (c)2014 Rubén Torres - rubentdlh@gmail.com
  * Released under the MIT license
  */
@@ -46,7 +45,7 @@ var singleDs = [];
  				if($(this).is(":checked")){
  					$(this).attr("data-dirrty-initial-value", "checked");
  				}else{
- 					$(this).attr("data-dirrty-initial-value", "");
+ 					$(this).attr("data-dirrty-initial-value", "unchecked");
  				}
  			});
  		},
@@ -69,6 +68,11 @@ var singleDs = [];
 				});
 
 				d.form.find("input, textarea").on('keyup keydown blur', function(){
+					d.checkValues();
+				});
+
+				//fronteend's icheck support
+				d.form.find("input[type=radio], input[type=checkbox]").on('ifChecked', function(event){
 					d.checkValues();
 				});
 

@@ -1,7 +1,7 @@
 {
     "name": "dirrty",
     "title": "dirrty",
-    "description": "jquery plugin to detect if the fields of a form had been modified",
+    "description": "jquery plugin to detect when the fields of a form are modified",
     "keywords": [
         "dirty",
         "form",
