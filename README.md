@@ -14,9 +14,7 @@ https://www.youtube.com/watch?v=2xMWrKhLJq4
 
 Usage
 --------
-`<code>`
-$("#form-id").dirrty();
-`</code>`
+`$("#form-id").dirrty();`
 
 Options
 --------
@@ -29,8 +27,6 @@ Options
 Methods
 ---------
 
-`<code>`
-$("#form-id").dirrty("isDirty");
-`</code>`
+`$("#form-id").dirrty("isDirty");`
 
 Lets you know if the form is dirty at a givent moment
