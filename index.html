@@ -1,0 +1,92 @@
+<html>
+
+<head>
+	<title>Dirrty</title>
+	<link href="css/dirrty.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div class="fomr-wrap">
+		<form id="my-form">
+			
+			<div>
+				<label for="first-name">First name:</label>
+				<input id="first-name" type="text" value="Christina">
+			</div>
+			
+			<div>
+				<label for="last-name">Last name:</label>
+				<input id="last-name" type="text" value="Aguilera">
+			</div>
+
+			<div>
+				<label for="house">Country:</label>
+				<select id="house">
+					<option value="pr">Puerto Rico</option>
+					<option value="cuba">Cuba</option>
+					<option value="usa" selected>USA</option>
+				</select>
+			</div>
+
+			<div>
+				<label for="message">Message:</label>
+			</div>
+			<div>
+				<textarea id="message"></textarea>
+			</div>
+
+			<div>
+				<label for="title">Age:</label>
+				<div>
+					<label>10 - 15</label><input type="radio" name="title" value="0">
+				</div>
+				<div>
+					<label>20 - 25</label><input type="radio" name="title" value="1">
+				</div>
+				<div>
+					<label>25 - 30</label><input type="radio" name="title" value="2">
+				</div>
+				<div>
+					<label>30+</label><input type="radio" name="title" value="3" checked>
+				</div>
+			</div>
+
+			<div>
+				Kissed Britney?
+				<input id="dirty-check" type="checkbox" value="" checked>
+			</div>
+
+			<div>
+				<div id="status">
+					Clean
+				</div>
+			</div>
+
+			<div>
+				<input id="save" type="button" value="Save Changes" disabled>
+			</div>
+		</form>
+	</div>
+
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/jquery.dirrty.js"></script>
+	<script>
+
+		$("#my-form").dirrty().on("dirty", function(){
+			$("#status").html("dirty"); 
+			$("#save").removeAttr("disabled");
+		}).on("clean", function(){
+			$("#status").html("clean"); 
+			$("#save").attr("disabled", "disabled");
+		})
+
+	</script>
+
+	<style>
+		div{
+			padding:5px;
+		}
+	</style>
+
+</body>
+</html>

@@ -116,11 +116,11 @@ var singleDs = [];
  		fireEvents: function(){
 
  			if(this.isDirty && this.wasJustClean()){
- 				this.options.onDirty();
+ 				this.form.trigger("dirty");
  			}
 
  			if(!this.isDirty && this.wasJustDirty()){
- 				this.options.onClean();
+ 				this.form.trigger("clean");
  			}
  		},
 
@@ -164,11 +164,13 @@ var singleDs = [];
 			}
 
 		}else if (typeof options == 'object' || !options) {
-			this.each(function(){
+			
+			return this.each(function(){
 				options = $.extend({}, $.fn.dirrty.defaults, options);
  				var dirrty = new Dirrty($(this), options);
  				dirrty.init();
 			});	
+			
 		}
 
  	}
