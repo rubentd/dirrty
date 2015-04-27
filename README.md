@@ -30,3 +30,5 @@ Methods
 `$("#form-id").dirrty("isDirty");`
 
 Lets you know if the form is dirty at a givent moment
+
+[Live Demo](http://rubentd.com/dirrty)
