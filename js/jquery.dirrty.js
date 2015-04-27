@@ -55,9 +55,13 @@ var singleDs = [];
  			
  			$(document).ready( function(){
 
+ 				d.form.on('submit', function(){
+ 					d.submitting = true;
+ 				});
+
  				if(d.options.preventLeaving){
 					$(window).on('beforeunload', function(){ 
-						if(d.isDirty){
+						if(d.isDirty && !d.submitting){
 							return d.options.leavingMessage;
 						}
 					});
