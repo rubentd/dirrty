@@ -1,7 +1,7 @@
 dirrty
 ===========
 
-jquery plugin to detect if the fields of a form had been modified.   
+lightweight jquery plugin to detect if the fields of a form had been modified.   
 If a field has been modified then the form is dirrty  
 
 - Detect the moment when the form gets dirty, and trigger a custom event, for example enable a "save changes" button
