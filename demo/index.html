@@ -6,14 +6,14 @@
 </head>
 
 <body>
-	<div class="fomr-wrap">
+	<div class="form-wrap">
 		<form id="my-form">
-			
+
 			<div>
 				<label for="first-name">First name:</label>
 				<input id="first-name" type="text" value="Christina">
 			</div>
-			
+
 			<div>
 				<label for="last-name">Last name:</label>
 				<input id="last-name" type="text" value="Aguilera">
@@ -68,24 +68,67 @@
 		</form>
 	</div>
 
-	<script src="js/jquery-1.10.2.min.js"></script>
-	<script src="js/jquery.dirrty.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="../dist/jquery.dirrty.js"></script>
 	<script>
 
 		$("#my-form").dirrty().on("dirty", function(){
-			$("#status").html("dirty"); 
+			$("#status").html("dirty");
 			$("#save").removeAttr("disabled");
 		}).on("clean", function(){
-			$("#status").html("clean"); 
+			$("#status").html("clean");
 			$("#save").attr("disabled", "disabled");
-		})
+		});
 
 	</script>
 
 	<style>
-		div{
-			padding:5px;
-		}
+	div{
+		padding:5px;
+	}
+	#save{
+	padding:0 30px;
+	line-height:50px;
+	height:50px;
+	background-color:#2688C9;
+	color:white;
+	border:none;
+}
+
+#save[disabled]{
+	background-color:#acacac;
+}
+
+.form-wrap{
+	margin:20px;
+	width:300px;
+	padding:10px;
+}
+
+label{
+	display:block;
+}
+
+form{
+	border:1px dashed #333;
+	padding:20px;
+	margin-left:40px;
+}
+
+form div{
+	padding:5px;
+}
+
+input, select, textarea{
+	padding:5px;
+	border:1px solid #5e5e5e;
+	font-size:14px;
+}
+
+section{
+	margin-bottom:50px;
+}
+
 	</style>
 
 </body>

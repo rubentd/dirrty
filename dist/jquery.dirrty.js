@@ -1,7 +1,7 @@
-/* 
- * Dirrty v0.1.7
- * jquery plugin to detect when the fields of a form are modified 
- * (c)2014 Rubén Torres - rubentdlh@gmail.com
+/*
+ * Dirrty v0.2.0
+ * jquery plugin to detect when the fields of a form are modified
+ * (c)2014 Rubï¿½n Torres - rubentdlh@gmail.com
  * Released under the MIT license
  */
 
@@ -13,7 +13,7 @@ var singleDs = [];
  	function getSingleton(id){
  		var result;
  		$(singleDs).each(function(){
-			if($(this)[0].id == id){ 
+			if($(this)[0].id == id){
 				result = $(this)[0];
 			}
  		});
@@ -52,7 +52,7 @@ var singleDs = [];
 
  		setEvents: function(){
  			var d = this;
- 			
+
  			$(document).ready( function(){
 
  				d.form.on('submit', function(){
@@ -60,7 +60,7 @@ var singleDs = [];
  				});
 
  				if(d.options.preventLeaving){
-					$(window).on('beforeunload', function(){ 
+					$(window).on('beforeunload', function(){
 						if(d.isDirty && !d.submitting){
 							return d.options.leavingMessage;
 						}
@@ -97,10 +97,10 @@ var singleDs = [];
  				var initialValue = $(this).attr("data-dirrty-initial-value");
  				if($(this).is(":checked") && initialValue != "checked"
  					|| !$(this).is(":checked") && initialValue == "checked"){
- 					$(this).attr("data-is-dirrty", "true");	
+ 					$(this).attr("data-is-dirrty", "true");
 				}else{
-					$(this).attr("data-is-dirrty", "false");	
-				}					
+					$(this).attr("data-is-dirrty", "false");
+				}
  			});
  			var isDirty = false;
  			this.form.find("input, select, textarea").each( function(){
@@ -163,18 +163,18 @@ var singleDs = [];
 			}
 			switch(options){
 				case 'isDirty':
-					return d.isDirty; 
+					return d.isDirty;
 					break;
 			}
 
 		}else if (typeof options == 'object' || !options) {
-			
+
 			return this.each(function(){
 				options = $.extend({}, $.fn.dirrty.defaults, options);
  				var dirrty = new Dirrty($(this), options);
  				dirrty.init();
-			});	
-			
+			});
+
 		}
 
  	}
