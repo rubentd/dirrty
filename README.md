@@ -6,7 +6,7 @@ If a field has been modified then the form is dirrty
 
 - Detect the moment when the form gets dirty, and trigger a custom event, for example enable a "save changes" button
 - Detect the moment when the form gets clean again, and trigger a custom event, for example disable the "save changes" button, cause is not necesary
-- Promt the user to save changes before leaving if the form is dirty
+- Prompt the user to save changes before leaving if the form is dirty
 
 The name comes from Christina Aguilera's 2002 song:
 https://www.youtube.com/watch?v=2xMWrKhLJq4
