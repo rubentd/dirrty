@@ -153,7 +153,7 @@ var singleDs = [];
 
  	$.fn.dirrty = function(options) {
 
-		if (/^(isDirty)$/i.test(options)) {
+		if (/^(isDirty)$/i.test(options) || /^(setClean)$/i.test(options)) {
 			//Check if we have an instance of dirrty for this form
 			var d = getSingleton($(this).attr("id"));
 
@@ -164,7 +164,9 @@ var singleDs = [];
 			switch(options){
 				case 'isDirty':
 					return d.isDirty;
-					break;
+				case 'setClean':
+					d.setClean();
+					return true;
 			}
 
 		}else if (typeof options == 'object' || !options) {
