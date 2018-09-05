@@ -1,0 +1,19 @@
+{
+  "name": "dirrty",
+  "version": "1.0.0",
+  "description": "jquery plugin to detect if the fields of a form had been modified",
+  "main": "dist/jquery.dirrty.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rubentd/dirrty.git"
+  },
+  "author": "Ruben Torres",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rubentd/dirrty/issues"
+  },
+  "homepage": "https://github.com/rubentd/dirrty#readme"
+}
