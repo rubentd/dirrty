@@ -36,8 +36,8 @@ Options
 |---|---|---|
 | preventLeaving | show a message when a user attempts to leave the page with a dirty form | true
 | leavingMessage | the message to show when a user tries leaving the page with a dirty form. **Most modern browsers [no long support](https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload#Browser_compatibility) setting a custom message and will show their own message regardless.** | "You have unsaved changes"
-| onDirty | **depricated** - [see change](https://github.com/sdomino/dirrty/commit/ad9f0d3bf5cb958ac9a309741815bf9f69444325) | function(){} |
-| onClean | **depricated** - [see change](https://github.com/sdomino/dirrty/commit/ad9f0d3bf5cb958ac9a309741815bf9f69444325) | function(){} |  
+| onDirty | **deprecated** - [see change](https://github.com/sdomino/dirrty/commit/ad9f0d3bf5cb958ac9a309741815bf9f69444325) | function(){} |
+| onClean | **deprecated** - [see change](https://github.com/sdomino/dirrty/commit/ad9f0d3bf5cb958ac9a309741815bf9f69444325) | function(){} |  
 
 Methods
 ---------
